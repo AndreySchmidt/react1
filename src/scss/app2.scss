@@ -1,5 +1,215 @@
+//Container & Breakpoints
+@use 'sass:math';
+$containerWidth: 1140;
+$containerPadding: 40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1450: 1449.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint480: 479.98 + px;
+
+//tmp
+$burgerBreakpoint: $breakpoint768;
+$burgerColor: #131418;
+$burgerActiveColor: #fefefe;
+
+//Fonts
+$fontMain:'Inter', sans-serif;
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: #3B5D50;
+
+    &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+.logo {
+    a {
+        color: #fff;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    // width: 100%;
+}
+
+.menu {
+    display: flex;
+    gap: 44px;
+
+    &-item {
+        display: flex;
+        position: relative;
+    }
+
+    &-item-link {
+        display: flex;
+        position: relative;
+        transition: 0.5s color;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        opacity: 0.5;
+        text-transform: capitalize;
+
+        // underline for a
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -10px;
+            background-color: #f9bf29;
+            height: 5px;
+            width: 100%;
+            transform: scale(0);
+            transition: 0.5s transform;
+        }
+        &:hover {
+            // color: #131418;
+            opacity: 1;
+            &:after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    // Mobile
+    // @media screen and (max-width: $burgerBreakpoint) {
+    //     position: fixed;
+    //     background: $burgerColor;
+    //     left: 0;
+    //     top: 0;
+    //     height: 100vh;
+    //     width: 100vw;
+    //     flex-direction: column;
+    //     pointer-events: all;
+    //     justify-content: center;
+    //     align-items: center;
+    //     z-index: 2;
+    //     animation: fade 0.1s linear;
+    // }
+
+    // Mobile menu styles
+    @media screen and (max-width: $burgerBreakpoint) {
+        position: fixed;
+        background: $burgerColor;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+
+        &.active {
+            display: flex;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            pointer-events: all;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            animation: fade 0.1s linear;
+
+            .menu-item-link {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.burger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    height: 30px;
+    width: 30px;
+    outline: none;
+    padding: 0;
+    pointer-events: initial;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: $burgerBreakpoint) {
+        display: flex;
+    }
+    
+    span {
+        background-color: $burgerColor;
+        content: '';
+        display: block;
+        height: 2px;
+        left: calc(50% - 13px);
+        position: absolute;
+        top: calc(50% - 1px);
+        transform-origin: 50% 50%;
+        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+        width: 26px;
+
+        &:before,
+        &:after {
+            background-color: $burgerColor;
+            content: '';
+            display: block;
+            height: 2px;
+            position: absolute;
+            transform-origin: 50% 50%;
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+            width: 26px;
+        }
+
+        &:before {
+            top: 7px;
+        }
+
+        &:after {
+            top: -7px;
+        }
+    }
+
+    &.active {
+        span {
+            background-color: transparent;
+            transition: background 0.2s ease-out;
+
+            &:before,
+            &:after {
+                transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+                background-color: $burgerActiveColor;
+            }
+
+            &:before {
+                top: 0;
+                transform: rotate3d(0,0,1,-45deg);
+            }
+
+            &:after {
+                top: 0;
+                transform: rotate3d(0,0,1,45deg);
+            }
+        }
+    }
 }
