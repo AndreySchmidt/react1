@@ -294,12 +294,12 @@ a {
 
 .section-materials {
 
-    .container {
-        max-width: 1200px;
-    }
+    // .container {
+    //     max-width: 1200px;
+    // }
 
     .title {
-        color: #000;
+        color: #2F2F2F;
         font-size: 34px;
     }
 
@@ -308,15 +308,23 @@ a {
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
+        margin: 20px 30px 30px 0;
     }
 
     .materials {
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding-top: 100px;
     }
 
     .item {
         width: 240px;
+
+        &-img {
+            min-height: 300px;
+        }
 
         p {
             color: #2F2F2F;
@@ -325,15 +333,25 @@ a {
             font-size: 16px;
             line-height: 24px;
         }
+
+        .price {
+            font-weight: 700;
+            font-size: 18px;
+        }
     }
 
     .first-item {
         width: 300px;
-        margin-left: 177px;
+        // margin-left: 177px;
 
         // p {
         //     color: #6A6A6A;
         // }
     }
 
+}
+
+
+.choose {
+    padding: 25px 0 70px 0;
 }
