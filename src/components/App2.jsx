@@ -400,7 +400,45 @@ export const App2 = () => (
                 </div>
             </section>
 
-            
+            <section className='section-examples'>
+                <div className='container'>
+                    <div className='examples'>
+                        <div className='item'>
+                            <div className='examples-img'>
+                                <img src="/assets/img/example1.png" />
+                            </div>
+                            <div className='examples-info'>
+                                <h3>Nordic Chair</h3>
+                                <p>Donec mattis porta eros, aliquet finibus risus in. Donecd </p>
+                                <a href="">Read more</a>
+                            </div>
+                        </div>
+
+                        <div className='item'>
+                            <div className='examples-img'>
+                                <img src="/assets/img/example2.png" />
+                            </div>
+                            <div className='examples-info'>
+                                <h3>Kruzi Aero</h3>
+                                <p>Donec mattis porta eros, aliquet finibus risus in. Donecd </p>
+                                <a href="">Read more</a>
+                            </div>
+                        </div>
+
+                        <div className='item'>
+                            <div className='examples-img'>
+                                <img src="/assets/img/example3.png" />
+                            </div>
+                            <div className='examples-info'>
+                                <h3>Ergonomic Chair</h3>
+                                <p>Donec mattis porta eros, aliquet finibus risus in. Donecd </p>
+                                <a href="">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <footer></footer>
