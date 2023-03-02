@@ -564,6 +564,9 @@ a {
             color: #6A6A6A;
             text-decoration: none;
         }
+        a:hover {
+            color: #2F2F2F;
+        }
     }
 
     &-img {
@@ -582,7 +585,14 @@ a {
     }
 }
 
-.examples {
-    // display: flex;
-    // justify-content: space-between;
+.testimonials {
+    margin:0 auto;
+    max-width: 1200px;
+
+    .item {
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

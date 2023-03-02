@@ -439,6 +439,29 @@ export const App2 = () => (
                 </div>
             </section>
 
+            <section className='section-testimonials'>
+                <div className='container'>
+                    <div className='testimonials'>
+                        <h2>Testimonials</h2>
+                        <div className='item'>
+                            <div className='left-btn'>b</div>
+                            <div className='text'>
+                                <p>
+                                    Donec nibh magna, interdum quis massa sed, rhoncus laoreet quam. Mauris accumsan felis fermentum euismod egestas.
+                                    Mauris ante augue, cursus sit amet arcu a, maximus suscipit nibh. Integer vel nibh tellus.
+                                    Pellentesque in risus non dui venenatis sollicitudin sed vitae diam. Fusce tincidunt nisl mi, at molestie odio accumsan non. Pellentesque ma
+                                </p>
+                            </div>
+                            <div className='right-btn'>b</div>
+
+                            <div className='ava'>img</div>
+                            <div className='name'>t</div>
+                            <div className='position'>t</div>
+                        </div>
+                        <div className='dot-paginator'></div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer></footer>
