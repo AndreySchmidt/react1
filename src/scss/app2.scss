@@ -360,7 +360,7 @@ a {
 
 
 .choose {
-    padding: 60px 0 70px 0;
+    padding: 80px 0 70px 0;
     display: flex;
     justify-content: center;
     gap: 100px;
@@ -442,5 +442,86 @@ a {
         font-size: 14px;
         line-height: 22px;
         color: #2F2F2F;
+    }
+}
+
+
+.help {
+    padding: 40px 0 70px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin:0 auto;
+    max-width: 1200px;
+
+    .left {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        width: 600px;
+        height: 540px;
+
+        .help1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+        }
+        .help2 {
+            position: absolute;
+            top: 220px;
+            left: 340px;
+            border-radius: 10px;
+        }
+        .help3 {
+            position: absolute;
+            top: 0;
+            left: 440px;
+            border-radius: 10px;
+        }
+        .hdotted {
+            position: absolute;
+            top: -60px;
+            left: -120px;
+            z-index: -1;
+        }
+    }
+    .right {
+        width: 480px;
+        margin-left: 70px;
+
+        .title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 41px;
+            color: #2F2F2F;
+        }
+
+        .text {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #6A6A6A;
+        }
+
+        li {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #6A6A6A;
+            padding-left: 20px;
+            list-style: circle;
+            width: 240px;
+        }
+
+        ul {
+            padding: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 }
